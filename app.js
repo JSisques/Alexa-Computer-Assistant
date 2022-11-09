@@ -6,9 +6,8 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT
 
+app.use(require('./src/exec/router'))
+
 app.listen(port, () => {
-  logger.info("Server runnig at port " + port)
-  logger.debug("Server runnig at port " + port)
-  logger.warn("Server runnig at port " + port)
-  logger.error("Server runnig at port " + port)
+  logger.info(`Server initialized, runnig at port ${port}`)
 })

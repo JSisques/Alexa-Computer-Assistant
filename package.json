@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/JSisques/Alexa-Computer-Assistant#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "moment": "^2.29.4",
