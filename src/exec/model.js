@@ -1,19 +1,24 @@
 const childProcess = require("child_process");
+const logger = require("../util/logger");
 
 module.exports = {
 
     async execCommand(command) {
-
-        childProcess.exec(command, (error, stdout, stderr) => {
+        
+        return childProcess.exec(command, (error, stdout, stderr) => {
             if (error) {
-                console.log(`error: ${error.message}`);
-                return;
+                logger.error("Command [" + command + "] failed");
+                logger.error(error.message);
+                return false;
             }
             if (stderr) {
-                console.log(`stderr: ${stderr}`);
-                return;
+                logger.error("Command [" + command + "] failed");
+                logger.error(stderr);
+                return false;
             }
-            console.log(`stdout: ${stdout}`);
+            logger.info("Command [" + command + "] succesfully executed");
+            return true;
         });
+        
     }
 }
