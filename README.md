@@ -17,6 +17,10 @@ If we run the program in a device that runs with MacOS we will have the followin
 
 ### Windows commands
 If we run the program in a device that runs with Windows operating system we will have the following commands that can be executed:
+- `chrome` => Opens a new chrome tab in the host computer, by default the direction will be [Google.com](https://www.google.com/).
+- `vscode` => Opens a new Visual Studio Code instance.
+- `shutdown` => Shutdown the host computer, by default it executes the following command: `shutdown -p`
+- `restart` => Restarts the host computer, by default it executes the following command: `shutdown -r`
 
 ## Author
 - **Javier Plaza Sisqués**
