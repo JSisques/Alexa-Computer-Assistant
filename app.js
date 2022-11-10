@@ -10,4 +10,5 @@ app.use(require('./src/exec/router'))
 
 app.listen(port, () => {
   logger.info(`Server initialized, runnig at port ${port}`)
+  logger.debug("Server operating system " + process.env.APP_OS)
 })
